@@ -1,0 +1,41 @@
+
+.table{
+   border-block-start:2px solid #E7E9ED ;
+   display: flex;
+   justify-content: space-around;
+  
+}
+.table span{
+   opacity: 50%;
+}
+
+.table ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   row-gap: 13px;
+   margin-top: 30px;
+  
+}
+
+
+ul li a {
+   color: rgb(4, 72, 162);
+   text-decoration: none;
+
+}
+.t5 li a{
+
+   color: #01209c;
+   font-weight: 700 ;
+   line-height: 30px;
+   text-decoration: none;
+
+}
+
+
+
+
+
+
+
