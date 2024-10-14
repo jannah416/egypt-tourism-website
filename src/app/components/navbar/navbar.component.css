@@ -3,12 +3,17 @@ header{
       width:100%;
     
    }
+.date{
+   font-weight: 600;
+   color:rgb(4, 72, 162) ;
+}
+
    nav{
       display: flex;
       padding: -1% 2%;
       justify-content: space-between;
    }
-
+ 
    .navss{
       flex: 1;
       text-align: right;
@@ -16,7 +21,7 @@ header{
    .navss ul li{
       list-style: none;
       display: inline-block;
-      padding: 8px 12px;
+      padding: 18px 12px;
       position: relative;
       }
    .navss ul li a{

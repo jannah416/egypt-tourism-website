@@ -31,5 +31,8 @@ export const routes: Routes = [
      path: 'where-to-go'     ,
      component: WhereToGoComponent  ,                                                                                   
  }   , 
-                                                                                    
+ {
+    path: '**',
+    redirectTo: '',
+  },                                                                           
 ];
