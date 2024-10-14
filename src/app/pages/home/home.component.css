@@ -1,0 +1,202 @@
+.welcome_mess{
+  text-align: center;
+  color: rgb(212, 161, 32);
+}
+
+
+
+.About_Egypt h2{
+  margin-block-start: 59px;
+ margin-block-end: 16px;
+font-weight: 700;
+font-size: 40px;
+
+}                                                                        
+.About_Egypt h6{
+    margin-block-start: 18px;
+    margin-block-end: 16px;
+   color: rgb(4, 72, 162);
+   font-weight: 700;
+   }    
+
+.About_Egypt_part2 {
+  margin-block-end: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: space-around; /* Centers the cards */
+}
+
+.Geo ,.His,.Cult{
+  flex: 1 1 calc(33.33% - 40px); /* Each card takes one-third of the container's width */
+  min-width: 250px; /* Minimum card width to control responsiveness */
+}
+
+.Geo{
+padding: 9px;
+background-color: #013787;
+color: #f8f9fa;;
+width: 378px;
+    
+}
+.His{
+padding: 9px;
+background-color:  #1d6a79;
+color: #f8f9fa;
+width: 378px;
+   
+}
+.Cult{
+padding: 18px;
+background-color: #0dcaf0;
+color: #f8f9fa;
+width: 378px;                                                                                     
+}
+
+.P1,.P2,.P3{
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.348); /* Add shadow */
+}
+.card {
+  position: relative;
+  overflow: hidden; /* Ensures the overlay is contained within the card */
+}
+
+.card img {
+  transition: transform 0.3s; /* Smooth transition for image scaling */
+}
+
+.card img:hover {
+  transform: scale(1.1); /* Scale image up on hover */
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hide overlay by default */
+  transition: opacity 0.3s; /* Smooth transition for overlay */
+}
+
+.card:hover .overlay {
+  opacity: 1; /* Show overlay on card hover */
+}
+.Discover_Egypt h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-block-end: 16px;
+}
+.Discover_Egypt p{
+  font-weight: 500;
+}
+
+.Discover_Egypt h3{
+  margin-block-start: 30px;
+  color: rgb(4, 72, 162);
+}
+.video-container {
+  margin-block-start: 45px;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center (optional if you want full page centering) */
+  
+}
+.video-container iframe{
+  border-radius: 25px;
+}
+.Useful_Info h2{
+  margin-block-start: 45px;
+ margin-block-end: 16px;
+font-weight: 700;
+font-size: 40px;
+
+}                                                                        
+.Useful_Numbers h3 ,.Useful_Info h3{
+  color: rgb(4, 72, 162);
+}
+ ul {
+  list-style: none;}
+
+ul li a {
+color: rgba(0, 0, 0, 0.719);
+  text-decoration: none;
+
+}
+a:hover {
+  background-color: #0dcaf0;
+  font-size: 18px;
+  font-weight: 500;
+}
+table, th, td {
+  border: 1px dotted lightgray;
+  text-align: center;
+  padding: 8px;
+}
+table td:first-child{
+  text-align: left;
+}
+table td:last-child:hover{
+  background-color: #0dcaf0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width:768px){
+
+.About_Egypt h2 ,.Discover_Egypt h2 {
+  text-align: center;
+   }
+  
+ .About_Egypt p {
+  min-height: min-content;
+  font-size: 11px;
+      }     
+      .Geo ,.His,.Cult{
+        flex: 1 1 calc(50% - 40px);
+      }
+      .Useful_Info{
+      text-align: center;
+      font-size: 11px;
+      }
+     .Useful_Numbers{
+      text-align: center;
+      font-size: 11px;
+  
+     }       
+     .Useful_Numbers table{
+    
+      font-size: 11px;
+     }                                                                     
+}
+
+
+
+
+   
