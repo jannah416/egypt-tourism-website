@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './where-to-go.component.html',
-  styleUrl: './where-to-go.component.css'
+  styleUrl: './where-to-go.component.css',
 })
-export class WhereToGoComponent {
-
-}
+export class WhereToGoComponent {}

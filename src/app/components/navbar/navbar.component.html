@@ -1,14 +1,48 @@
 <header>
-            <nav>
-              <a href="/" class="logo"><img style="width: 130px" [src]="imgSrc" alt="" /> </a>
-              <div class="navss" id="links">
-                <ul>
-                 <li><a routerLink="/home">Home</a></li>
-                 <li><a routerLink="/where-to-go">Where To Go</a></li>
-                 <li><a routerLink="/egypt-day-tours">Egypt Day Tours</a></li>
-                 <li><a routerLink="/contact-us">Contact Us</a></li>
-                 <li><a routerLink="/login">Login</a></li>
-                </ul>
-              </div>
-            </nav>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a href="/" class="logo navbar-brand"
+        ><img style="width: 70px" src="/assets/images/imgs/logo1.png" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main"
+        aria-controls="main"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-3">
+          <li class="nav-item">
+            <a
+              routerLink="/home"
+              class="nav-link active p-2 p-lg-3"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a routerLink="/where-to-go" class="nav-link p-2 p-lg-3"
+              >Where To Go</a
+            >
+          </li>
+          <li class="nav-item position-relative">
+            <a routerLink="/egypt-day-tours" class="nav-link p-2 p-lg-3"
+              >Egypt Day Tours</a
+            >
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact-us" class="nav-link p-2 p-lg-3"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <a routerLink="/login" class="btn main-btn rounded-pill">Login</a>
+      </div>
+    </div>
+  </nav>
 </header>
