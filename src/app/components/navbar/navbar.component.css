@@ -1,7 +1,10 @@
 :root {
   --blue-color: #0b405e;
 }
-
+.date{
+  font-weight: 600;
+  color:rgb(4, 72, 162) ;
+}
 /* Start Navbar */
 .navbar {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
