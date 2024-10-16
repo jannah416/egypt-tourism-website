@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+@Component({
+  selector: 'app-home',
+  standalone: true,
+=======
 import { Component ,OnInit} from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
@@ -8,6 +13,7 @@ import { Router } from '@angular/router';
   selector: 'app-home',
   standalone: true,
   imports: [NgFor],
+>>>>>>> main-dev
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
