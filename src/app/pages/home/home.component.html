@@ -1,0 +1,164 @@
+<<<<<<< HEAD
+=======
+
+<div class="welcome_mess">
+  <h4>{{ welcomeMessage }}</h4>
+</div>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/images/slide1.jpeg" class="d-block w-100" alt="slide1">
+      <div class="carousel-caption  d-md-block">
+        <h2>Welcome To Egypt</h2>
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/slide2.jpeg" class="d-block w-100" alt="slide2">
+      <div class="carousel-caption  d-md-block">
+        <h2>Swim in Stunnig Shades of Blue</h2>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/slide3.jpeg" class="d-block w-100" alt="slide3">
+      <div class="carousel-caption  d-md-block">
+        <h2>Relive History</h2>
+        
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="About_Egypt">
+  <h2>{{AboutEgypt}}</h2>
+  <h6>Discover the Warmth of Egypt & Make Lifelong Memories</h6>
+  <p>A life well-travelled cannot be considered complete without at least one visit to Egypt! Egypt isn't just home to the oldest and best-preserved historical sites on earth, 
+    the country offers diverse holiday experiences catered to your travel preferences.You can enjoy an immersive urban experience in Cairo and Alexandria, discover some of the best snorkeling and scuba diving sites in the world in the Red Sea, get a taste of life on the Nile on personalized Nile cruises, or curate your own desert adventure. 
+    The energy, hospitality, and good humor of the Egyptian people are at the heart of any visit to Egypt, with sunny smiles etched onto the faces of nearly every person you will encounter. Expect multiple offers for homecooked meals, invites to weddings and parties, and a chance to make new friends as warm as the golden Egyptian sun.</p>
+</div>
+
+<div class="About_Egypt_part2">
+  <div class="P1">
+   <div class="ab1_img"><img src="assets/images/About01.png" ></div>
+    <div class="Geo">
+      <h3>Geography</h3>
+      <p>From the River Nile to the splendor of our vast deserts, and from the glistening waters at beaches to the rugged mountains, discover what the diverse landscapes of Egypt have to offer.</p>
+    </div>
+  </div>
+  <div class="P2">
+    <div class="ab2_img"><img src="assets/images/About02.png" ></div>
+    <div class="His">
+     <h3>History</h3>
+     <p>You've heard about the Great Pyramids of Giza, but Egypt has much more magic and mystique to offer. The vastness and diversity of our history will inspire you.</p>
+    </div>
+  </div>
+  <div class="P3">
+    <div class="ab3_img"><img src="assets/images/About03.png" ></div>
+    <div class="Cult">
+      <h3>Culture</h3>
+      <p>The first thing you will notice is the warmth and hospitality of our people. Come and discover the richness of our way of life.</p>
+    </div>
+  </div>     
+</div>
+
+
+<div class="Discover_Egypt">
+  <h2>{{DiscoverEgypt}}</h2>
+  <div class="video-container">
+    <iframe width="540" height="310" 
+      src="https://www.youtube.com/embed/FiS1NPDHBVs?mute=1" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <h3>Where to Go ?</h3>
+  <div class="d-flex justify-content-center">
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card">
+      <img src="assets/images/egypt.webp" class="card-img-top" alt="Egypt">
+      <div class="card-body  text-center">
+        <p class="card-text">Pick your destination and start your Egypt experience now.</p>
+        <button class="btn btn-primary" (click)="handleNavigate('/where-to-go')">Go To Where-To-Go Page Now!</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</div>
+
+<div class="Useful_Info">
+  <h2>{{UsefulInformations}}</h2>
+  <h3>How to Get There ?</h3>
+  <ul>
+    <li *ngFor="let airport of airports">
+      <a [href]="airport.url" target="_blank">{{ airport.name }}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="Useful_Numbers">
+  <h3>Useful Numbers</h3>
+  <p>We wish you a pleasant stay, but just to be extra safe, keep these numbers handy for quick and easy access in case of inquiries, suggestions, or emergencies! 
+    <br>They will be sent to you via SMS upon arrival.</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Numbers</th>
+  </tr>
+  <tr>
+    <td>
+      Ministry of Tourism and Antiquities</td>
+    <td>19654</td>
+  </tr>
+  <tr>
+    <td>Tourist Police</td>
+    <td>126</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>123</td>
+  </tr>
+  <tr>
+    <td>Air Hospital Service</td>
+    <td>+(202) 377 66392/3</td>
+  </tr>
+  <tr>
+    <td>Telephone Guide	</td>
+    <td>140</td>
+  </tr>
+  <tr>
+    <td>Cairo Airport Shuttle Bus</td>
+    <td>19970</td>
+  </tr>
+  <tr>
+    <td>Gas Emergency</td>
+    <td>129</td>
+  </tr>
+  <tr>
+    <td>Fire services</td>
+    <td>180</td>
+  </tr>
+</table>
+</div>
+
+<div class="d-flex justify-content-center mt-5 mb-5">
+<button class="mx-3 btn btn-primary py-2 px-2" (click)="handleNavigate('/login')">Go To Login Page Now!</button>
+</div>
+>>>>>>> main-dev
