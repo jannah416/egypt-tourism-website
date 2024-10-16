@@ -93,7 +93,7 @@ body {
 
 @media (max-width: 575.98px) {
   .data-price {
-    top: 236px;
+    top: 155px;
   }
 
   .row .col-md-6 {
@@ -102,6 +102,7 @@ body {
 
   * {
     font-size: 13px;
+    overflow-x: hidden;
   }
 
   span,
