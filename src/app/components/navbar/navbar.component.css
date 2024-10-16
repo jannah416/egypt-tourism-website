@@ -1,79 +1,55 @@
-header {
-  width: 100%;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
+:root {
+  --blue-color: #0b405e;
 }
 
-.navss {
-  flex: 1;
-  text-align: right;
+/* Start Navbar */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.navss ul li {
-  list-style: none;
-  display: inline-block;
-  position: relative;
-}
-.navss ul li a {
-  color: rgb(4, 72, 162);
-  text-decoration: none;
-  font-size: 15px;
+
+.navbar .navbar-nav .nav-link {
+  color: var(--blue-color);
   font-weight: 600;
+  font-size: 16px;
 }
-.navss ul li::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: gold;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffc400;
 }
-.navss ul li:hover::after {
-  width: 100%;
+.navbar .navbar-toggler {
+  color: var(--blue-color);
+  font-size: 25px;
+  border: 1px solid white;
 }
-header{
-   
-      width:100%;
-    
-   }
-.date{
-   font-weight: 600;
-   color:rgb(4, 72, 162) ;
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
 }
 
-   nav{
-      display: flex;
-      padding: -1% 2%;
-      justify-content: space-between;
-   }
- 
-   .navss{
-      flex: 1;
-      text-align: right;
-   } 
-   .navss ul li{
-      list-style: none;
-      display: inline-block;
-      padding: 18px 12px;
-      position: relative;
-      }
-   .navss ul li a{
-      color: rgb(4, 72, 162);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      }
-   .navss ul li::after{
-      content: '';
-      width: 0%;
-      height: 2px;
-      background: gold;
-      display: block;
-      margin: auto;
-      transition: 0.5s;
-      }
-   .navss ul li:hover::after{
-      width: 100%;
-   }
+.main-btn {
+  background-color: var(--blue-color);
+  color: #ffc400;
+  padding: 0.75rem 1.25rem;
+  font-weight: 900;
+  border: none;
+}
+.main-btn:hover {
+  background-color: #ff3150;
+  color: #ffc400;
+}
+
+/* if aria-expanded = "true", Then....*/
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: #33d1cc;
+}
+
+/* End Navbar */
+
+@media (max-width: 575.98px) {
+  .navbar .navbar-toggler i {
+    font-size: 20px;
+  }
+
+  .main-btn {
+    font-size: 16px;
+  }
+}

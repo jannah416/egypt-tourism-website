@@ -5,8 +5,6 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './where-to-go.component.html',
-  styleUrl: './where-to-go.component.css'
+  styleUrl: './where-to-go.component.css',
 })
-export class WhereToGoComponent {
-
-}
+export class WhereToGoComponent {}
