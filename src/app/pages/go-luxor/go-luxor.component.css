@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling if there's overflow */
+}
+
+/* To remove padding was given to all app */
+.app[_ngcontent-ng-c2744186268] {
+  padding: 0;
+}
+
+.span-style {
+  color: #007bff;
+}
+
+/* Start Section Luxor */
+
+.luxor .cover-luxor {
+  background: url(/assets/images/imgs/luxor/1597234829luxor-344b2-lg.jpg)
+    no-repeat center center;
+  background-size: cover;
+  height: 400px;
+}
+
+.luxor .cover-luxor h1 {
+  width: 100%;
+  top: 100px;
+  left: 30px;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+.card:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+
+.card .info {
+  padding: 7px;
+  padding-top: 1rem;
+}
+.card .info p {
+  padding-top: 1rem;
+  height: 100px;
+}
+.card .info h5 {
+  margin: 5px 0 0 0;
+  font-weight: 900;
+  font-size: 21px;
+  height: 50px;
+}
+
+.card ul li {
+  color: #0b405e;
+  font-weight: bold;
+}
+
+.card .data-price {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.logo-loc {
+  width: 20px;
+  height: 20px;
+}
+.icon-tour {
+  width: 25px;
+  height: 25px;
+}
+
+/* End Section Luxor */
+
+@media (max-width: 575.98px) {
+  .data-price {
+    top: 155px;
+  }
+
+  .row .col-md-6 {
+    margin-bottom: 2rem;
+  }
+
+  * {
+    font-size: 13px;
+    overflow-x: hidden;
+  }
+
+  span,
+  .span-style {
+    font-size: 18px;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .data-price {
+    top: 250px;
+  }
+}
+
+/* Medium devices (small laptops/tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .data-price {
+    top: 150px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .data-price {
+    top: 125px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .data-price {
+    top: 160px;
+  }
+}

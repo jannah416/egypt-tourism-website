@@ -7,7 +7,7 @@ import { FormControl, FormGroup, ReactiveFormsModule,Validators ,FormBuilder} fr
   standalone: true,
   imports: [ReactiveFormsModule,NgIf],
   templateUrl: './contact-us.component.html',
-  styleUrl: './contact-us.component.css'
+  styleUrl: './contact-us.component.css',
 })
 export class ContactUsComponent {
   ContactForm!: FormGroup; 

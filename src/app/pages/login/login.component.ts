@@ -9,7 +9,7 @@ import { FormControl,FormGroup,ReactiveFormsModule,Validators,} from '@angular/f
   standalone: true,
   imports: [ReactiveFormsModule, NgIf],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
 

@@ -1,0 +1,110 @@
+:root {
+  --btn-color: #0b405e;
+  --blue-color: #007bff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling if there's overflow */
+}
+
+/* To remove padding was given to all app */
+.app[_ngcontent-ng-c2744186268] {
+  padding: 0;
+}
+
+.main-btn {
+  padding: 0.5rem, 1rem;
+  background-color: var(--blue-color);
+  color: white;
+}
+.main-btn:hover {
+  color: white;
+  background-color: var(--blue-color);
+  text-decoration: underline;
+}
+
+.span-style {
+  color: var(--blue-color);
+}
+
+/* Start section Places */
+
+.places .cover-egy {
+  background: url("https://www.traveltoegypt.net/uploads/siteContent/1607944287egypt-day-tours.jpg")
+    no-repeat center center;
+  background-size: cover;
+  height: 400px;
+}
+
+.places .cover-egy h1 {
+  width: 100%;
+  top: 100px;
+  left: 30px;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.places {
+  background-color: #f8f9fa;
+}
+
+.box {
+  padding: 5px;
+  overflow: hidden;
+  border: 2px solid black;
+  height: 275px;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box .mask {
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+
+  background-color: rgb(255 255 255 / 60%);
+  transform: translateX(calc(-100% - 5px));
+  transition: 0.3s;
+}
+
+.box:hover .mask {
+  transform: translateX(0);
+}
+
+.box .mask .text h5 {
+  color: var(--blue-color);
+}
+
+/* End section Places */
+
+/* Media Queryes */
+
+/* Extra small devices (phones, 0px and up) */
+@media (max-width: 575.98px) {
+  .row .col-md-6 {
+    margin-bottom: 2rem;
+  }
+
+  * {
+    font-size: 13px;
+    overflow-x: hidden;
+  }
+
+  span,
+  .span-style {
+    font-size: 18px;
+  }
+}
