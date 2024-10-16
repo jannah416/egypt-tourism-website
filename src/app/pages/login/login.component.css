@@ -1,0 +1,21 @@
+.custom-form {
+    width: 60%; 
+    max-width: 400px; 
+    border: 1px solid #ccc;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba( 0 , 0 , 0 , 0.1 );
+  
+}
+
+.form-group input{
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+.form-group label{
+    font-weight:500;
+    padding: 10px;
+    color:rgb(4, 72, 162) ;
+}
