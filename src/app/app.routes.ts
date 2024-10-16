@@ -48,4 +48,8 @@ export const routes: Routes = [
     path: 'go-sharm',
     component: GoSharmComponent,
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
