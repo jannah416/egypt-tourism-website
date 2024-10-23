@@ -1,0 +1,84 @@
+<section class="sharm pb-5" id="go-sharm">
+  <div class="cover-sharm position-relative">
+    <h1 class="position-absolute text-white animated-left">
+      Sharm El Sheikh Day tours
+    </h1>
+  </div>
+
+  <div class="container text-center">
+    <h2 class="pt-5 pb-3 text-start">Sharm El Sheikh Day tours</h2>
+    <p class="text-start">
+      Sharm el Sheikh is one of the red sea cities which is located in the south
+      of the Sinai Peninsula. Enjoy Sharm el sheikh day tours, because it's
+      considered a major tourism hub, especially for summer beach vacations. The
+      two cities of Sharm and Hurghada city are ranked as top diving
+      destinations worldwide for having amazing marine life, coral reef gardens,
+      and rare fish species. Diving and snorkelling are the most popular things
+      to do in Sharm el Sheikh besides many of the water sports and thrilling
+      desert activities. Sharm el Sheikh day trips & Hurghada day tours are
+      introducing a bunch of different experiences that include desert safari
+      trips, water activities, excursions, and religious places tours as well.
+    </p>
+    <h2 class="pb-2 text-start">Things to do in Sharm el Sheikh day trips</h2>
+    <p class="text-start">
+      Travel to Egypt has already covered most of Egypt day tours and organized
+      Sharm el Sheikh excursions to the famous Aquapark, dolphin park, Saint
+      Catherine monastery, and desert camps. If you are searching for a perfect
+      beach vacation, diving activities, and adventurous trips, you have to
+      check out Sharm el Sheikh day tours that are prepared for you to enjoy
+      your trip to Egypt. Between all Egypt tours, only in Sharm El Sheikh,
+      enjoy snorkelling among different families of rare fish and get to know
+      their homes amidst the colourful coral reefs. But if you are a fan of
+      desert and safari, safari tours in Sharm El-Sheikh city have a distinct
+      taste because each mountain has what distinguishes it such as the Canyon
+      Mountains, in addition to the Bedouin night that takes place in the midst
+      of nature to get to know the Bedouins who live in the desert and love it
+      despite its hardness and difficult living in it. The tombs and pharaonic
+      monuments are well-known features of Egypt tours, so after and have a
+      chilling beach break you can follow our plan of Luxor day tours from Sharm
+      el Sheikh that we have operated for you. Luxor city is a historical
+      treasure, so don't miss the chance to visit it. admire the pharaonic
+      civilization by visiting the valley of the kings, Hatshepsut temple,
+      colossi of Menon, and Karnak temple. If your time enables you to check the
+      peace of Aswan day tours, do it immediately.
+    </p>
+    <h1 class="my-5">
+      The best excursions of
+      <span class="span-style">Sharm El Sheikh</span> day tours
+    </h1>
+    <div class="row">
+      <div *ngFor="let card of cardsSharm" class="col-md-6 col-lg-4 mb-sm-4">
+        <div class="card position-relative">
+          <div class="data-price position-absolute">
+            <i class="fa fa-tags"></i>
+            From: <span class="fw-bold">${{ card.price }}</span>
+          </div>
+          <img [src]="card.imageUrl" alt="" />
+          <div class="info">
+            <h5>{{ card.title }}</h5>
+          </div>
+          <hr />
+
+          <ul class="list-unstyled d-flex px-3">
+            <li>
+              <img
+                src="assets/images/imgs/icon-tour.webp"
+                class="icon-tour"
+                alt=""
+              />
+              Private Tour
+            </li>
+            <li class="ms-auto">
+              <img
+                src="assets/images/imgs/icon-map.webp"
+                class="logo-loc"
+                alt=""
+              />
+              Approx. 6 Hours
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+<section class="cairo pb-5">
+  <div class="cover-cairo position-relative">
+    <h1 class="text-white position-absolute animated-left">Cairo day tours</h1>
+  </div>
+
+  <div class="container text-center">
+    <h2 class="mt-5 pb-3 text-start">Cairo day tours</h2>
+    <p class="text-start">
+      Check Cairo day tours and Cairo excursions offered by Travel to Egypt to
+      discover that Cairo attractions have a history that spans centuries. Full
+      of vigor, Cairo is the only city where you can feel the Egyptian street
+      life. Egypt tours are not completed without a visit to the city for a
+      couple of days. Cairo or as it is called "the mother of all cities" is the
+      capital of Egypt, the Islamic world, and the largest urbanization icon of
+      Africa. Through Egypt day tours, enjoy The priceless treasure of Pharaoh's
+      culture exists in every corner, masterpieces of Islamic and Coptic history
+      are also viewed in the city's landmarks. Cairo day tours are very diverse,
+      but we make sure to provide them all. there are a lot of things to do in
+      Cairo, from Islamic mosques, and Coptic churches to museums and bazaars.
+      Our Cairo day trips will provide you with fully satisfying sightseeing of
+      Egyptian ancient history and modern Cairo attractions. Cairo excursions
+      will take you starting from camel rides in the desert of Giza Pyramids to
+      the luxury Nile River cruise.
+    </p>
+    <h2 class="pb-3 text-start">Top Cairo excursions | Cairo day trips 2022</h2>
+    <p class="text-start">
+      Discover the oldest civilization with us through the most important
+      touristic destinations like the Egyptian Museum in Cairo which displays
+      more than 150,000 antiques. We offer you Cairo sightseeing tours to expose
+      Pharaonic civilization during your visits to Giza pyramids, Memphis,
+      Sakkara. Moreover, Travel To Egypt Cairo excursions allow you to uncover
+      the historical, religious side of Egypt, such as Mohamed Ali Mosque, the
+      hanging church, and Salah El-din citadel which is considered to be one of
+      the most iconic castles built in the middle ages. Our Cairo day tours
+      guarantee you an amazing trip to Egypt. You can have dinner with your
+      friends and family while sailing for two hours or discover old Cairo on
+      city walk tours. There are a lot of things to do In Cairo and places to
+      visit that we have operated them all in Cairo attractions.
+    </p>
+    <h1 class="my-5">
+      The best excursions of <span class="span-style">Cairo</span> day tours
+    </h1>
+    <div class="row">
+      <div *ngFor="let card of cardsCairo" class="col-md-6 col-lg-4 mb-sm-4">
+        <div class="card position-relative">
+          <div class="data-price position-absolute">
+            <i class="fa fa-tags"></i>
+            From: <span class="fw-bold">${{ card.price }}</span>
+          </div>
+          <img [src]="card.imageUrl" alt="" />
+          <div class="info">
+            <h5>{{ card.title }}</h5>
+            <p *ngIf="card.description" class="text-black-50">
+              {{ card.description }}
+            </p>
+          </div>
+          <hr />
+
+          <ul class="list-unstyled d-flex px-3">
+            <li>
+              <img
+                src="assets/images/imgs/icon-tour.webp"
+                class="icon-tour"
+                alt=""
+              />
+              Private Tour
+            </li>
+            <li class="ms-auto">
+              <img
+                src="assets/images/imgs/icon-map.webp"
+                class="logo-loc"
+                alt=""
+              />
+              Approx. {{ card.hours }} Hours
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

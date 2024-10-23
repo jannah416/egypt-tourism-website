@@ -1,0 +1,148 @@
+:root {
+  --blue-color: #0b405e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling if there's overflow */
+}
+
+.span-style {
+  color: #007bff;
+}
+
+/* Start Cairo Section */
+
+.cairo .cover-cairo {
+  background: url(/assets/images/imgs/cairo/1597234693cairo-day-tours-40caa-lg.jpg)
+    no-repeat center center;
+  background-size: cover;
+  height: 400px;
+}
+
+.cairo .cover-cairo h1 {
+  width: 100%;
+  top: 120px;
+  left: 30px;
+  font-size: 64px;
+  font-weight: 400;
+  transition: 0.4s all;
+}
+
+.cairo .cover-cairo h1.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+  animation-timeline: image();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+.card:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+
+.card .info {
+  padding: 7px;
+  padding-top: 1rem;
+}
+.card .info p {
+  padding-top: 1rem;
+  height: 100px;
+}
+.card .info h5 {
+  margin: 5px 0 0 0;
+  font-weight: 600;
+  font-size: 21px;
+  height: 50px;
+}
+
+.card ul li {
+  color: var(--blue-color);
+  font-weight: bold;
+}
+
+.card .data-price {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.logo-loc {
+  width: 20px;
+  height: 20px;
+}
+.icon-tour {
+  width: 25px;
+  height: 25px;
+}
+
+/* End Cairo Section */
+
+@media (max-width: 575.98px) {
+  .data-price {
+    top: 155px;
+  }
+
+  .row .col-md-6 {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    margin: 0 20px;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .data-price {
+    top: 250px;
+  }
+}
+
+/* Medium devices (small laptops/tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .data-price {
+    top: 150px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .data-price {
+    top: 125px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .data-price {
+    top: 160px;
+  }
+}

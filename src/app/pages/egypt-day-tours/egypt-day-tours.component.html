@@ -1,4 +1,81 @@
-
 <div class="egypt-day-tours">
-<h1>Hello from egypt-day-tours Page</h1>
+  <!------------------- Start Section Places  ------------------>
+  <section class="places">
+    <div class="cover-egy position-relative">
+      <h1 class="text-white position-absolute animated-left">
+        Egypt day trips (Egypt excursions)
+      </h1>
+    </div>
+
+    <div class="container text-center py-5">
+      <h1>Egypt Excursions & Egypt day tours</h1>
+      <p class="fs-5 pb-5 text-black-50">
+        Through Egypt excursions discover the best collection for Egyptian
+        sightseeing, you can book your Egypt day tours and travel to Egypt now
+        because Egypt is a hot spot in the continent of Africa, and one of the
+        most popular touristic destinations worldwide. Discover Egypt excursions
+        If you are planning to visit Egypt cities any time soon, then you need a
+        reference for Egypt day trips and things to do in Egypt. To help you
+        plan and enjoy your
+        <span class="span-style">Egypt tours</span>, we've compiled a list of
+        the most important tours in Egypt to discover the country's beauty and
+        diversity, starting with historical day tours, the majority of which are
+        concentrated in <span class="span-style">Luxor day tours</span> , and
+        ending with quietness and enjoyment tours, which we define as the sea,
+        warmth, and the famous clear turquoise waters which found in Hurghada
+        day tours and Sharm El Sheikh as well, where the international sites for
+        diving and the scuba diving through which you discover the rare coral
+        reefs. Egypt is the land of the pharaohs and has been attracting
+        tourists worldwide for centuries. If you are planning Egypt day trips
+        and don’t know where to begin, start with
+        <span class="span-style">Cairo day tours</span> to witness the majestic
+        three pyramids, sphinx, and more. Some travelers want even more
+        pharaonic sites. you can also travel to Egypt with your family through
+        our amazing Egypt family tours. Then, we highly recommend you to book
+        one of the Luxor day tours or Aswan day tours where countless temples,
+        tombs, and obelisks date back to ancient Egypt. the southern cities of
+        Luxor and Aswan can be visited also by Nile river cruise which we have
+        made a whole category for. Egypt day trips offer fun beach vacations as
+        well in the red sea cities. Escape the summer heat and enjoy water
+        sports and activities in the top two cities overlooks the red sea which
+        are <span class="span-style">Sharm el sheik day tours</span> .
+      </p>
+
+      <div class="row">
+        <div *ngFor="let tour of tours" class="col-md-6 col-lg-4 mb-sm-4">
+          <div class="box position-relative">
+            <div class="mask position-absolute">
+              <div class="text mt-5">
+                <h5>{{ tour.title }}</h5>
+                <p>
+                  {{ tour.description }}
+                </p>
+
+                <a
+                  class="btn main-btn"
+                  [routerLink]="['/go-cairo']"
+                  *ngIf="tour.title === 'Cairo day tours'"
+                  >Read More</a
+                >
+                <a
+                  class="btn main-btn"
+                  [routerLink]="['/go-luxor']"
+                  *ngIf="tour.title === 'Luxor day tours'"
+                  >Read More</a
+                >
+                <a
+                  class="btn main-btn"
+                  [routerLink]="['/go-sharm']"
+                  *ngIf="tour.title === 'Sharm El Sheikh day tours'"
+                  >Read More</a
+                >
+              </div>
+            </div>
+            <img class="w-100 h-100" [src]="tour.imageUrl" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------------- End Section Places  ------------------>
 </div>

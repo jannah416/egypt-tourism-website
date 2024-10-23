@@ -1,0 +1,296 @@
+/* Start Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* to remove all space was exict in all page on the right horizintally */
+/* this was problem, so i solved it by this code(was not find in others sections) */
+header,
+.luxor,
+.cairo,
+.sharm,
+.discover {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.box {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  transition: 0.3s;
+
+  width: 370px;
+}
+
+.box:hover {
+  transform: translateY(-15px);
+}
+
+img {
+  width: 370px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* End Global */
+
+/* Start Section Welcome */
+header .image {
+  background: rgba(0, 0, 0, 0.463)
+    url("https://images.pexels.com/photos/20840208/pexels-photo-20840208/free-photo-of-6th-october-bridge-in-cairo.jpeg?auto=compress&cs=tinysrgb&w=600")
+    no-repeat center center;
+  background-blend-mode: darken;
+  height: 70vh;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: min-content;
+}
+header .image .animated-drop {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: dropDown 1s ease-in-out forwards;
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+header .image h1 {
+  color: white;
+  font-size: 3.2rem;
+  padding: 50px 0;
+}
+
+header .image p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 70%;
+}
+header .image .blurred-background {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* End Section Welcome */
+
+/* Start Section Discover */
+.discover .discover-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 50px 0;
+  color: rgb(4, 72, 162);
+}
+.discover .containerr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.discover .containerr .card {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 600px;
+  justify-content: space-around;
+  padding: 20px 30px;
+  border: 1px solid rgb(236, 223, 223);
+  border-radius: 8px;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  margin-bottom: 30px;
+}
+.discover .containerr .card:last-child {
+  margin-bottom: 0;
+}
+.discover .containerr .card:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+.discover .containerr .card .zoom {
+  overflow: hidden;
+  width: 100%;
+  height: 340px;
+}
+.discover .containerr .card img {
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+.discover .containerr .card img:hover {
+  transform: scale(1.3);
+}
+
+.discover .containerr .card button {
+  padding: 12px 20px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  background-color: #0b405e;
+  color: white;
+  transition: 0.3s all;
+}
+.discover .containerr .card button:hover {
+  background-color: rgb(4, 72, 162);
+  color: gold;
+}
+.discover .containerr .card h3 {
+  color: rgb(4, 72, 162);
+}
+/* End Section Discover */
+
+/* Start Section Luxor */
+.luxor .luxor-cover {
+  background: url("https://images.pexels.com/photos/24743611/pexels-photo-24743611/free-photo-of-tourists-visiting-the-mortuary-temple-of-hatshepsut.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center;
+  background-size: cover;
+  height: 90vh;
+}
+.luxor .luxor-cover h2,
+.cairo .cairo-cover h2,
+.sharm .sharm-cover h2 {
+  color: white;
+  font-size: 5rem;
+  top: 300px;
+  left: 50px;
+  width: 100%;
+}
+
+.start-des {
+  margin: 0 50px;
+}
+.start-des .text h2 {
+  padding-bottom: 20px;
+}
+.start-des .text p {
+  font-size: 17px;
+}
+.start-des .images-grid {
+  margin: auto;
+  width: 70%;
+  height: min-content;
+  padding: 10px 5px 50px 5px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 100vh;
+}
+.start-des .images-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.start-des .image-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.start-des .image-2 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+.start-des .image-3 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.start-des .image-4 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+@media (max-width: 450px) {
+  .start-des .images-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .start-des .images-grid .image-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  .start-des .images-grid .image-2 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+  .start-des .images-grid .image-3,
+  .start-des .images-grid .image-4 {
+    grid-column: auto;
+    grid-row: 3 / 4;
+  }
+}
+
+.need-to-see,
+.dicover-dems {
+  margin: 0 50px;
+}
+.need-to-see h2,
+.dicover-dems h2 {
+  margin-bottom: 30px;
+}
+
+.need-to-see .boxes .box .text,
+.dicover-dems .boxes .box p {
+  padding: 20px;
+}
+
+/* End Section Luxor */
+
+/* Start  Section Cairo */
+.cairo .cairo-cover {
+  background: url("https://images.pexels.com/photos/16288048/pexels-photo-16288048/free-photo-of-sailboats-in-cairo.jpeg?auto=compress&cs=tinysrgb&w=600")
+    no-repeat center center;
+  background-size: cover;
+  height: 90vh;
+}
+/* End Section Cairo */
+
+/* Start Section Sharm */
+.sharm .sharm-cover {
+  background: url("https://www.tripsavvy.com/thmb/1yXTbJpiFoS-RRBnxjbrogPy63g=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-496255780-abbefacba80142a4a824f0402cc061e0.jpg")
+    no-repeat center center;
+  background-size: cover;
+  height: 90vh;
+}
+/* End Section Sharm */
