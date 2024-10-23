@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './go-cairo.component.css',
   encapsulation: ViewEncapsulation.None,
 })
-export class GoCairoComponent {
+export class GoCairoComponent implements OnInit {
   imgSrc: string = 'assets/images';
 
   cardsCairo = [
@@ -117,4 +117,11 @@ export class GoCairoComponent {
       imageUrl: 'assets/images/imgs/cairo/coptic_43582_lg.jpg',
     },
   ];
+
+  constructor() {}
+
+  ngOnInit(): void {
+    // Scroll to the top of the page when the component is loaded
+    window.scrollTo(0, 0);
+  }
 }

@@ -1,53 +1,111 @@
 <header>
-  <h1>Contact Us Now!</h1>
-  <p>If you need help or have any questions about specific destinations in Egypt, please feel free to reach out to us. <br>We're here to assist you in planning your perfect adventure!</p>
+  <div class="text position-absolute">
+    <h1 class="animated-drop">Contact Us Now!</h1>
+    <p class="animated-left">
+      If you need help or have any questions about specific destinations in
+      Egypt, please feel free to reach out to us. <br />We're here to assist you
+      in planning your perfect adventure!
+    </p>
+  </div>
 </header>
 <div class="contact">
-<form class="d-flex flex-column align-items-center justify-content-center h-100 custom-form"
-      [formGroup]="ContactForm"
-      (ngSubmit)="onSubmit()">
-
-  <div class="form-group">
-    <label for="name">Name *</label>
-    <input id="name" type="text"  formControlName="name" class="form-control" placeholder="Ali" />
-    <div *ngIf="ContactForm.controls['name'].invalid && ContactForm.controls['name'].touched" class="text-danger">
-      <small *ngIf="ContactForm.controls['name'].errors?.['required']">Name is required.</small>
-      <small *ngIf="ContactForm.controls['name'].errors?.['minlength']">Name must be at least 3 characters long.</small>
+  <form
+    class="d-flex flex-column justify-content-center custom-form"
+    [formGroup]="ContactForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="form-group">
+      <label for="name">Name *</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        class="form-control"
+        placeholder="Full name"
+      />
+      <div
+        *ngIf="
+          ContactForm.controls['name'].invalid &&
+          ContactForm.controls['name'].touched
+        "
+        class="text-danger"
+      >
+        <small *ngIf="ContactForm.controls['name'].errors?.['required']"
+          >Name is required.</small
+        >
+        <small *ngIf="ContactForm.controls['name'].errors?.['minlength']"
+          >Name must be at least 3 characters long.</small
+        >
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="email">Email *</label>
-    <input id="email" type="email" formControlName="email" class="form-control" placeholder="ali200@gmail" />
-    <div *ngIf="ContactForm.controls['email'].invalid && ContactForm.controls['email'].touched" class="text-danger">
-      <small *ngIf="ContactForm.controls['email'].errors?.['required']">Email is required.</small>
-      <small *ngIf="ContactForm.controls['email'].errors?.['email']">Invalid email format.</small>
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        class="form-control"
+        placeholder="Your name"
+      />
+      <div
+        *ngIf="
+          ContactForm.controls['email'].invalid &&
+          ContactForm.controls['email'].touched
+        "
+        class="text-danger"
+      >
+        <small *ngIf="ContactForm.controls['email'].errors?.['required']"
+          >Email is required.</small
+        >
+        <small *ngIf="ContactForm.controls['email'].errors?.['email']"
+          >Invalid email format.</small
+        >
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="message">Message *</label>
-    <textarea id="message" formControlName="message" class="form-control"></textarea>
-    <div *ngIf="ContactForm.controls['message'].invalid && ContactForm.controls['message'].touched" class="text-danger">
-      <small *ngIf="ContactForm.controls['message'].errors?.['required']">Message is required.</small>
-      <small *ngIf="ContactForm.controls['message'].errors?.['minlength']">Message must be at least 10 characters long.</small>
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea
+        rows="3"
+        id="message"
+        formControlName="message"
+        class="form-control text-message"
+      ></textarea>
+      <div
+        *ngIf="
+          ContactForm.controls['message'].invalid &&
+          ContactForm.controls['message'].touched
+        "
+        class="text-danger"
+      >
+        <small *ngIf="ContactForm.controls['message'].errors?.['required']"
+          >Message is required.</small
+        >
+        <small *ngIf="ContactForm.controls['message'].errors?.['minlength']"
+          >Message must be at least 10 characters long.</small
+        >
+      </div>
     </div>
-  </div>
 
-  <button type="submit" class="btn btn-primary py-2 px-4 m-3"
-          [disabled]="ContactForm.invalid">Submit</button>
-</form>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="ContactForm.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
 
 <div class="map-container">
- 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.6945067247656!2d31.134123815492745!3d29.975280982091055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840a9e0222553%3A0xe6a41fd312cabc0d!2sGiza%20Pyramids%2C%20Al%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1636672333834!5m2!1sen!2sus"
-      width="70%"
-      height="300"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-  
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.6945067247656!2d31.134123815492745!3d29.975280982091055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840a9e0222553%3A0xe6a41fd312cabc0d!2sGiza%20Pyramids%2C%20Al%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1636672333834!5m2!1sen!2sus"
+    width="70%"
+    height="300"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  >
+  </iframe>
 </div>

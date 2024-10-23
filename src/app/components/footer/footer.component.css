@@ -1,5 +1,5 @@
 .footer {
-  background-color: #333;
+  background-color: #0b405e;
   color: white;
   padding: 20px 0;
 }
@@ -33,14 +33,29 @@
   color: #fff;
   text-decoration: underline;
 }
+
+.footer-section .icons li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 38px;
+  transition: 0.3s;
+}
+.footer-section .icons li:hover {
+  transform: translateY(-10px);
+}
+
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column;
+    flex-direction: column;
   }
   .footer-section {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
-.footer-section p{
+.footer-section p {
   width: 400px;
 }

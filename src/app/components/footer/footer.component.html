@@ -1,39 +1,62 @@
 <footer class="footer">
   <div class="footer-content">
-      <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">Log-in</a></li>
-              
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Egypt Day Tours</h3>
-          <ul>
-              <li><a href="#cairo">Cairo Tours</a></li>
-              <li><a href="#luxor">Luxor Tours</a></li>
-              <li><a href="#aswan">Sharm El-sheikh Tours</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Contact Us</h3>
-          <ul>
-              <li>Email: info&#64;example.com</li>
-              <li>Phone: +20 123 456 7890</li>
-              <li>Address: 123 Tahrir Square, Cairo, Egypt</li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Support</h3>
-          <ul>
-              <li>Customer Service: +20 098 765 4321</li>
-              <li>Emergency: +20 111 222 3333</li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#login">Egypt&Tourism</a></li>
-              <p>
-                Egypt is renowned for its rich history, stunning pyramids, ancient temples, and vibrant culture, attracting tourists worldwide year-round.</p>
-          </ul>
-      </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a [routerLink]="['/login']">Log-in</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Egypt Day Tours</h3>
+      <ul>
+        <li>
+          <a [routerLink]="['/go-cairo']">Cairo Tours</a>
+        </li>
+        <li>
+          <a [routerLink]="['/go-luxor']">Luxor Tours</a>
+        </li>
+        <li>
+          <a [routerLink]="['/go-sharm']">Sharm El-sheikh Tours</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Email: info&#64;example.com</li>
+        <li>Phone: +20 123 456 7890</li>
+        <li>Address: 123 Tahrir Square, Cairo, Egypt</li>
+      </ul>
+
+      <ul class="d-flex list-unstyled icons my-5 gap-3">
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li>Customer Service: +20 098 765 4321</li>
+        <li>Emergency: +20 111 222 3333</li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#login">Egypt&Tourism</a></li>
+        <p>
+          Egypt is renowned for its rich history, stunning pyramids, ancient
+          temples, and vibrant culture, attracting tourists worldwide
+          year-round.
+        </p>
+      </ul>
+    </div>
   </div>
 </footer>

@@ -1,28 +1,69 @@
-
-  <div class="container d-flex align-items-center justify-content-center mt-4 mb-4  ">
-<form class="d-flex flex-column align-items-center justify-content-center h-100 custom-form   "
- [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
-  <div class="form-group ">
-    <label for="email">Email*</label>
-    <input id="email" type="email"  placeholder="info123@gmail.com"formControlName="email" class="form-control">
-    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-danger">
-      <small *ngIf="loginForm.get('email')?.hasError('required')">Email is required.</small>
-      <small *ngIf="loginForm.get('email')?.hasError('email')">Enter a valid email address.</small>
+<div class="login container d-flex justify-content-center my-5">
+  <form
+    class="d-flex flex-column justify-content-center h-100 custom-form"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="info123@gmail.com"
+        formControlName="email"
+        class="form-control"
+        required
+      />
+      <div
+        *ngIf="
+          loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+        "
+        class="text-danger"
+      >
+        <small *ngIf="loginForm.get('email')?.hasError('required')"
+          >Email is required.</small
+        >
+        <small *ngIf="loginForm.get('email')?.hasError('email')"
+          >Enter a valid email address.</small
+        >
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="password">Password*</label>
-    <input id="password" type="password" placeholder="Password*" formControlName="password" class="form-control">
-    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
-      <small *ngIf="loginForm.get('password')?.hasError('required')">Password is required.</small>
-      <small *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long.</small>
-      <small *ngIf="loginForm.get('password')?.hasError('maxlength')">Password must be at max 16 characters long.</small>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Password*"
+        formControlName="password"
+        class="form-control"
+        required
+      />
+      <div
+        *ngIf="
+          loginForm.get('password')?.invalid &&
+          loginForm.get('password')?.touched
+        "
+        class="text-danger"
+      >
+        <small *ngIf="loginForm.get('password')?.hasError('required')"
+          >Password is required.</small
+        >
+        <small *ngIf="loginForm.get('password')?.hasError('minlength')"
+          >Password must be at least 6 characters long.</small
+        >
+        <small *ngIf="loginForm.get('password')?.hasError('maxlength')"
+          >Password must be at max 16 characters long.</small
+        >
+      </div>
     </div>
-  </div>
-  
 
-  <button type="submit" class=" btn btn-primary  py-2 px-4 m-3 " [disabled]="loginForm.invalid">Login</button>
-</form>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="loginForm.invalid"
+    >
+      Login
+    </button>
+  </form>
 </div>
-
