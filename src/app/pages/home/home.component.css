@@ -1,203 +1,308 @@
-.welcome_mess{
-  margin-top: 15px;
-  text-align: center;
-  color: rgb(212, 161, 32);
+/* Start global section */
+:root {
+  --blue-color: #0b405e;
 }
 
-
-
-.About_Egypt h2{
-  margin-block-start: 59px;
- margin-block-end: 16px;
-font-weight: 700;
-font-size: 40px;
-
-}                                                                        
-.About_Egypt h6{
-    margin-block-start: 18px;
-    margin-block-end: 16px;
-   color: rgb(4, 72, 162);
-   font-weight: 700;
-   }    
-
-.About_Egypt_part2 {
-  margin-block-end: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
-  justify-content: space-around; /* Centers the cards */
+html {
+  scroll-behavior: smooth;
 }
 
-.Geo ,.His,.Cult{
-  flex: 1 1 calc(33.33% - 40px); /* Each card takes one-third of the container's width */
-  min-width: 250px; /* Minimum card width to control responsiveness */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Geo{
-padding: 9px;
-background-color: #013787;
-color: #f8f9fa;;
-width: 378px;
-    
-}
-.His{
-padding: 9px;
-background-color:  #1d6a79;
-color: #f8f9fa;
-width: 378px;
-   
-}
-.Cult{
-padding: 18px;
-background-color: #0dcaf0;
-color: #f8f9fa;
-width: 378px;                                                                                     
+.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
 }
 
-.P1,.P2,.P3{
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.348); /* Add shadow */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.card {
+/* End global section */
+
+/* start Welcome section */
+
+.welcome_message h4 {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 30px;
+  padding: 5px 30px;
+}
+
+.welcome_message p {
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.welcome_message h4,
+.welcome_message p {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background: rgb(0 0 0 / 61%);
+}
+
+.welcome_message h4.animated-drop {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: dropDown 1s ease-in-out forwards;
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome_message {
+    display: block !important;
+  }
+}
+
+/* End Welcome section */
+
+/* Start Section About-Egypt */
+.About_Egypt .text-about-egypt h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.About_Egypt .text-about-egypt h6 {
+  color: var(--blue-color);
+  font-weight: 700;
+}
+.About_Egypt .text-about-egypt p {
+  font-size: 17px;
+}
+
+.about-egypt-boxes .box {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  margin: 10px;
+}
+.about-egypt-boxes .box:hover {
+  transform: translateY(-15px);
+}
+.about-egypt-boxes .box img {
+  width: 100%;
+}
+
+.about-egypt-boxes .box .text-cards {
+  padding: 20px;
+  height: 220px;
+}
+
+/* End Section About-Egypt */
+
+/* Start section Dicover-Egypt */
+.discover-egypt {
+  background-color: #eee;
   position: relative;
+}
+.cover-discover {
+  width: 100%;
+  height: 450px;
+  background: url("https://www.traveltoegypt.net/uploads/siteContent/1664881588blackdesert-bahariya-oasis-1.jpg")
+    no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+.discover-egypt .cover-discover h1 {
+  position: absolute;
+  left: 50px;
+  top: 150px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+  transition: 0.4s all;
+}
+
+.discover-egypt .text h1 {
+  font-weight: 600;
+  padding-top: 20px;
+}
+.discover-egypt .text p {
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.video-container iframe {
+  border-radius: 25px;
+}
+
+/* Start section Dicover-Egypt */
+
+/* Start Section Where-to-go */
+
+.where-go h1 {
+  margin-bottom: 30px;
+}
+
+.where-go .card {
+  width: 500px;
+  margin: 0 auto;
   overflow: hidden; /* Ensures the overlay is contained within the card */
 }
 
-.card img {
-  transition: transform 0.3s; /* Smooth transition for image scaling */
+.where-go .card .text-btn {
+  padding: 30px;
 }
 
-.card img:hover {
-  transform: scale(1.1); /* Scale image up on hover */
+.where-go .card img {
+  transition: transform 0.3s;
+}
+.where-go .card img:hover {
+  transform: scale(1.1);
 }
 
-.card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+.where-go .text-btn .btn {
+  background-color: var(--blue-color);
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Hide overlay by default */
-  transition: opacity 0.3s; /* Smooth transition for overlay */
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border: none;
+}
+.where-go .text-btn .btn:hover {
+  color: white;
+  background-color: var(--blue-color);
+  text-decoration: underline;
 }
 
-.card:hover .overlay {
-  opacity: 1; /* Show overlay on card hover */
+/* End Section Where-to-go */
+
+/* Start Section Useful-Informations */
+.useful_info {
+  background-color: #eee;
 }
-.Discover_Egypt h2 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-block-end: 16px;
-}
-.Discover_Egypt p{
-  font-weight: 500;
+.useful_info ul {
+  background-color: var(--blue-color);
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
 }
 
-.Discover_Egypt h3{
-  margin-block-start: 30px;
-  color: rgb(4, 72, 162);
+.useful_info ul li {
+  padding: 0.5rem 1.3rem;
+  border-bottom: 2px solid white;
+  transition: 0.3s;
 }
-.video-container {
-  margin-block-start: 45px;
-  display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center;     /* Vertically center (optional if you want full page centering) */
-  
+.useful_info ul li:hover {
+  transform: translateX(-10px);
 }
-.video-container iframe{
-  border-radius: 25px;
-}
-.Useful_Info h2{
-  margin-block-start: 45px;
- margin-block-end: 16px;
-font-weight: 700;
-font-size: 40px;
 
-}                                                                        
-.Useful_Numbers h3 ,.Useful_Info h3{
-  color: rgb(4, 72, 162);
-}
- ul {
-  list-style: none;}
-
-ul li a {
-color: rgba(0, 0, 0, 0.719);
+.useful_info ul li a {
+  color: white;
+  margin: 10px 0;
   text-decoration: none;
+}
+.useful_info ul li:hover a {
+  text-decoration: underline;
+}
 
+/* End Section Useful-Informations */
+
+/* Start section Useful-Numbers */
+.Useful_Numbers table {
+  margin: 20px auto;
+  background-color: var(--blue-color);
+  color: white;
 }
-a:hover {
-  background-color: #0dcaf0;
-  font-size: 18px;
-  font-weight: 500;
+.Useful_Numbers table td {
+  padding: 1rem 1.5rem;
 }
-table, th, td {
-  border: 1px dotted lightgray;
-  text-align: center;
+.Useful_Numbers table,
+.Useful_Numbers th,
+.Useful_Numbers td {
+  border: 1px solid white;
   padding: 8px;
 }
-table td:first-child{
+
+.Useful_Numbers table td:first-child {
   text-align: left;
 }
-table td:last-child:hover{
-  background-color: #0dcaf0;
-  font-size: 17px;
-  font-weight: 500;
+
+table td:last-child:hover {
+  transition: 0.3s;
+}
+table td:last-child:hover {
+  background-color: #007bff;
+}
+/* End section Useful-Numbers */
+
+.btn-go-login {
+  background-color: #007bff;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.btn-go-login a {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media  (max-width:768px){
-
-.About_Egypt h2 ,.Discover_Egypt h2 {
-  text-align: center;
-   }
-  
- .About_Egypt p {
-  min-height: min-content;
-  font-size: 11px;
-      }     
-      .Geo ,.His,.Cult{
-        flex: 1 1 calc(50% - 40px);
-      }
-      .Useful_Info{
-      text-align: center;
-      font-size: 11px;
-      }
-     .Useful_Numbers{
-      text-align: center;
-      font-size: 11px;
-  
-     }       
-     .Useful_Numbers table{
-    
-      font-size: 11px;
-     }                                                                     
+.btn-go-login:hover {
+  transform: scale(1.1, 1.1);
+  color: white;
 }
 
+/* Start Media Query */
 
+/* Small devices (tablets, 576px and up) */
+@media (max-width: 575.98px) {
+  * {
+    font-size: 16px;
+    box-sizing: border-box;
+  }
 
+  .col-md-6 .box {
+    height: 520px;
+  }
 
-   
+  .where-go .card {
+    width: 400px;
+  }
+
+  .Useful_Numbers table td {
+    padding: 1rem 0.5rem;
+  }
+
+  .discover-egypt .cover-discover h1 {
+    left: 25px;
+    top: 160px;
+  }
+
+  .video-container iframe {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-egypt-boxes .box {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .about-egypt-boxes .box img {
+    width: 100%;
+  }
+}
+
+/* End Media Query */

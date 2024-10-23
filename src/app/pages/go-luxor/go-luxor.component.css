@@ -3,17 +3,13 @@ html {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrolling if there's overflow */
-}
-
-/* To remove padding was given to all app */
-.app[_ngcontent-ng-c2744186268] {
-  padding: 0;
 }
 
 .span-style {
@@ -31,10 +27,30 @@ body {
 
 .luxor .cover-luxor h1 {
   width: 100%;
-  top: 100px;
+  top: 120px;
   left: 30px;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 400;
+  transition: 0.4s all;
+}
+
+.luxor .cover-luxor h1.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+  animation-timeline: image();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .card {
@@ -58,7 +74,7 @@ body {
 }
 .card .info h5 {
   margin: 5px 0 0 0;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 21px;
   height: 50px;
 }
@@ -95,14 +111,13 @@ body {
     margin-bottom: 2rem;
   }
 
-  * {
-    font-size: 13px;
-    overflow-x: hidden;
+  .card {
+    margin: 0 20px;
   }
 
-  span,
-  .span-style {
-    font-size: 18px;
+  .luxor .cover-luxor h1 {
+    left: 10px;
+    font-size: 65px;
   }
 }
 

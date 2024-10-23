@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -8,22 +8,19 @@ import { Router } from '@angular/router';
   imports: [NgFor],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent {
-  AboutEgypt: string = 'About Egypt';
-  DiscoverEgypt: string = 'Discover Egypt';
-  UsefulInformations: string = 'Useful Informations';
-
-  welcomeMessage = '';
+  welcomeMessage: string = '';
 
   ngOnInit() {
     const hour = new Date().getHours();
     if (hour < 12) {
-      this.welcomeMessage = 'Good Morning! Welcome to Egypt';
+      this.welcomeMessage = 'Good Morning! ';
     } else if (hour < 18) {
-      this.welcomeMessage = 'Good Afternoon! Welcome to Egypt';
+      this.welcomeMessage = 'Good Afternoon! ';
     } else {
-      this.welcomeMessage = 'Good Evening! Welcome to Egypt';
+      this.welcomeMessage = 'Good Evening! ';
     }
   }
   airports = [

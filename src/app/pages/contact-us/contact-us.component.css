@@ -1,52 +1,147 @@
-header{min-height: 100vh;
-    width:100%;
-    background-image: url('/assets/images/slide1.jpeg');
-    background-position: center top;
-  background-repeat: no-repeat;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Start Header */
+header {
+  height: 70vh;
+  width: 100%;
+  background: url("https://www.traveltoegypt.net/uploads/blog/1676820883solo-female-traveler.png")
+    no-repeat center center;
   background-size: cover;
-    position: relative;
- 
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-header h1{
-                                                                                              
-     font-weight: 700;
-     color:white;
-     position: absolute;
-    top:50%;
-   left:10%;
-   font-size: 50px;
-}
-header p{
-                                                                                              
-  font-weight: 500;
-  color:white;
-  position: absolute;
-    top:60%;
-   left:10%;
 
-}
-.form-group input{
-
-    padding: 10px;
-    width:100%;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-}
-   .form-group label{
- font-weight:500;
-padding: 15px;
-color:rgb(4, 72, 162) ;
+@media (min-width: 1400px) {
+  header {
+    height: 60vh;
   }
+}
 
-  .map-container {
+header .text {
+  color: white;
+  top: 30%;
+  left: 10%;
+}
+
+header .text h1 {
+  width: fit-content;
+  font-size: 35px;
+  text-transform: uppercase;
+  background: rgb(0 0 0 / 61%);
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+header .text h1.animated-drop {
+  opacity: 0;
+  transform: translateY(-150px);
+  animation: dropDown 1s ease-in-out forwards;
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header .text p {
+  margin-right: 50px;
+  font-size: 18px;
+  padding: 15px;
+  line-height: 24px;
+}
+
+header .text p.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+header .text h1,
+header .text p {
+  background: rgb(0 0 0 / 61%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* End Header */
+
+/* Start Form Contact */
+.contact {
+  width: 440px;
+  background-color: #0b405e;
+  height: 550px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
   display: flex;
-  justify-content: center; 
-  align-items: center;      
-  margin: 20px;            
+  justify-content: center;
+}
+
+@media (max-width: 575.98px) {
+  .contact {
+    width: 400px;
+  }
+}
+
+.form-group label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 17px;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+
+.form-group input {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 1.5rem;
+  line-height: 40px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 20px;
+  color: white;
+}
+
+button {
+  background-color: rgb(45, 126, 231);
+  line-height: 40px;
+  border-radius: 40px;
+  color: white;
+  margin-top: 30px;
+  font-size: 17px;
+}
+/* End Form Contact */
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 iframe {
-  max-width: 100%;          
-  height: 400px;            
-  border: 0;                
+  max-width: 100%;
+  height: 400px;
+  border: 0;
 }

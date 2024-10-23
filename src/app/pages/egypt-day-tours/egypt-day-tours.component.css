@@ -1,12 +1,11 @@
 :root {
-  --btn-color: #0b405e;
-  --blue-color: #007bff;
+  --blue-color: #0b405e;
+  --blue-color2: #007bff;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +13,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrolling if there's overflow */
-}
-
-/* To remove padding was given to all app */
-.app[_ngcontent-ng-c2744186268] {
-  padding: 0;
 }
 
 .main-btn {
@@ -35,7 +28,7 @@ body {
 }
 
 .span-style {
-  color: var(--blue-color);
+  color: var(--blue-color2);
 }
 
 /* Start section Places */
@@ -53,6 +46,23 @@ body {
   left: 30px;
   font-size: 64px;
   font-weight: 400;
+}
+
+.places .cover-egy h1.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .places {
@@ -85,7 +95,8 @@ body {
 }
 
 .box .mask .text h5 {
-  color: var(--blue-color);
+  color: var(--blue-color2);
+  font-weight: 600;
 }
 
 /* End section Places */
@@ -98,13 +109,12 @@ body {
     margin-bottom: 2rem;
   }
 
-  * {
-    font-size: 13px;
-    overflow-x: hidden;
-  }
-
   span,
   .span-style {
     font-size: 18px;
+  }
+
+  .box {
+    margin: 0 20px;
   }
 }

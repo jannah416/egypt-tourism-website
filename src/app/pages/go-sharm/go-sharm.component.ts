@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './go-sharm.component.css',
   encapsulation: ViewEncapsulation.None,
 })
-export class GoSharmComponent {
+export class GoSharmComponent implements OnInit {
   imgSrc: string = 'assets/images';
 
   cardsSharm = [
@@ -48,4 +48,11 @@ export class GoSharmComponent {
         'assets/images/imgs/sharm/Desert Safari Trip By Quad Bike_3d801_lg.jpg',
     },
   ];
+
+  constructor() {}
+
+  ngOnInit(): void {
+    // Scroll to the top of the page when the component is loaded
+    window.scrollTo(0, 0);
+  }
 }

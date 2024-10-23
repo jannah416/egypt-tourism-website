@@ -18,7 +18,7 @@ export class EgyptDayToursComponent {
     {
       title: 'Cairo day tours',
       description:
-        'Travel to Egypt offers Cairo day tours with very special programs, Cairo excursions are diverse...',
+        'Travel to Egypt offers Cairo day tours with very special programs, Cairo excursions are diverse and special...',
       imageUrl: 'assets/images/imgs/cairo-tower-4600720.jpg',
       go: 'go-cairo',
     },

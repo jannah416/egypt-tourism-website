@@ -1,30 +1,73 @@
+/* Start Global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.image {
+
+/* to remove all space was exict in all page on the right horizintally */
+/* this was problem, so i solved it by this code(was not find in others sections) */
+header,
+.luxor,
+.cairo,
+.sharm,
+.discover {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.box {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  transition: 0.3s;
+
+  width: 370px;
+}
+
+.box:hover {
+  transform: translateY(-15px);
+}
+
+img {
+  width: 370px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* End Global */
+
+/* Start Section Welcome */
+header .image {
   background: rgba(0, 0, 0, 0.463)
-    url("https://images.pexels.com/photos/20840208/pexels-photo-20840208/free-photo-of-6th-october-bridge-in-cairo.jpeg?auto=compress&cs=tinysrgb&w=600");
+    url("https://images.pexels.com/photos/20840208/pexels-photo-20840208/free-photo-of-6th-october-bridge-in-cairo.jpeg?auto=compress&cs=tinysrgb&w=600")
+    no-repeat center center;
   background-blend-mode: darken;
-  width: min(100%, 1700px);
-  height: 100vh;
+  height: 70vh;
   background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   min-height: min-content;
 }
-.animated-drop {
+header .image .animated-drop {
   opacity: 0;
   transform: translateY(-100px);
   animation: dropDown 1s ease-in-out forwards;
-  animation-timeline: image();
-  animation-range: entry 0 cover 40%;
 }
 
 @keyframes dropDown {
@@ -36,13 +79,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-.animated-left {
-  opacity: 0;
-  transform: translateX(-100px);
-  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
-  animation-timeline: image();
-  animation-range: entry 0 cover 40%;
 }
 
 @keyframes slideInLeft {
@@ -56,40 +92,44 @@
   }
 }
 
-.image h1 {
+header .image h1 {
   color: white;
   font-size: 3.2rem;
-  transition: 0.4s all;
   padding: 50px 0;
 }
-.image h1:hover {
-  color: gold;
-  cursor: default;
-}
-.image p {
+
+header .image p {
   color: white;
+  line-height: 1.6;
   font-size: 1.4rem;
-  margin: 0 0 60px 60px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 10px;
   width: 70%;
 }
-.blurred-background {
+header .image .blurred-background {
   background: transparent;
   backdrop-filter: blur(10px);
-  padding: 15px;
   border-radius: 10px;
   border: 2px solid white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.discover-heading {
+/* End Section Welcome */
+
+/* Start Section Discover */
+.discover .discover-heading {
   font-size: 2.5rem;
   text-align: center;
   margin: 50px 0;
   color: rgb(4, 72, 162);
 }
-section {
-  margin-bottom: 50px;
+.discover .containerr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.cardd {
+
+.discover .containerr .card {
   display: flex;
   flex-direction: column;
   width: 380px;
@@ -102,244 +142,155 @@ section {
   transition: all 0.3s;
   margin-bottom: 30px;
 }
-.cardd:last-child {
+.discover .containerr .card:last-child {
   margin-bottom: 0;
 }
-.cardd:hover {
+.discover .containerr .card:hover {
   cursor: pointer;
   background-color: #f0f0f0;
 }
-.cardd .zoom {
+.discover .containerr .card .zoom {
   overflow: hidden;
   width: 100%;
   height: 340px;
 }
-.cardd img {
+.discover .containerr .card img {
   width: 320px;
   height: 340px;
   object-fit: cover;
   transition: transform 0.8s;
 }
-.cardd img:hover {
+.discover .containerr .card img:hover {
   transform: scale(1.3);
 }
-.containerr {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.cardd button {
+
+.discover .containerr .card button {
   padding: 12px 20px;
   width: 200px;
   border: none;
   cursor: pointer;
-  background-color: gold;
-  color: rgb(4, 72, 162);
+  background-color: #0b405e;
+  color: white;
   transition: 0.3s all;
 }
-.cardd button:hover {
+.discover .containerr .card button:hover {
   background-color: rgb(4, 72, 162);
   color: gold;
 }
-.cardd h3 {
+.discover .containerr .card h3 {
   color: rgb(4, 72, 162);
 }
-.first-part {
-  background-image: url("https://images.pexels.com/photos/24743611/pexels-photo-24743611/free-photo-of-tourists-visiting-the-mortuary-temple-of-hatshepsut.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  height: 100vh;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  background-blend-mode: darken;
-  mix-blend-mode: darken;
-  background-position: center;
+/* End Section Discover */
+
+/* Start Section Luxor */
+.luxor .luxor-cover {
+  background: url("https://images.pexels.com/photos/24743611/pexels-photo-24743611/free-photo-of-tourists-visiting-the-mortuary-temple-of-hatshepsut.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center;
   background-size: cover;
+  height: 90vh;
 }
-.first-part p {
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
-  font-size: 5rem;
+.luxor .luxor-cover h2,
+.cairo .cairo-cover h2,
+.sharm .sharm-cover h2 {
   color: white;
-  font-weight: bold;
+  font-size: 5rem;
+  top: 300px;
+  left: 50px;
+  width: 100%;
 }
-@media (max-width: 600px) {
-  .first-part p {
-    font-size: 4rem;
-    left: 10px;
-    bottom: 10px;
-  }
+
+.start-des {
+  margin: 0 50px;
 }
-@media (max-width: 550px) {
-  .first-part p {
-    font-size: 3rem;
-    left: 0;
-    bottom: 0;
-  }
+.start-des .text h2 {
+  padding-bottom: 20px;
 }
-.luxor {
-  width: min(100%, 1700px);
+.start-des .text p {
+  font-size: 17px;
 }
-.image-grid {
-  width: min(1200px, 100%);
+.start-des .images-grid {
   margin: auto;
-}
-.image-grid h2 {
-  margin-bottom: 50px;
-}
-.image-grid p {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 2;
-  margin-bottom: 70px;
-}
-.images-grid {
+  width: 70%;
+  height: min-content;
+  padding: 10px 5px 50px 5px;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   height: 100vh;
 }
-.images-grid img {
+.start-des .images-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.image-1 {
+.start-des .image-1 {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
-.image-2 {
+.start-des .image-2 {
   grid-column: 3 / 5;
   grid-row: 1 / 2;
 }
-.image-3 {
+.start-des .image-3 {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
 }
-.image-4 {
+.start-des .image-4 {
   grid-column: 4 / 5;
   grid-row: 2 / 3;
 }
 @media (max-width: 450px) {
-  .images-grid {
+  .start-des .images-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
-  .image-1 {
+  .start-des .images-grid .image-1 {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
   }
-  .image-2 {
+  .start-des .images-grid .image-2 {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
   }
-  .image-3,
-  .image-4 {
+  .start-des .images-grid .image-3,
+  .start-des .images-grid .image-4 {
     grid-column: auto;
     grid-row: 3 / 4;
   }
 }
-.contain-imgs {
-  margin: auto;
-  width: 70%;
-  height: min-content;
-  padding: 10px 5px 50px 5px;
+
+.need-to-see,
+.dicover-dems {
+  margin: 0 50px;
 }
-.containing-img {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.need-to-see h2,
+.dicover-dems h2 {
+  margin-bottom: 30px;
 }
-.cardat {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+.need-to-see .boxes .box .text,
+.dicover-dems .boxes .box p {
+  padding: 20px;
 }
-.containing-img img {
-  width: 300px;
-  height: 300px;
-  border-radius: 9px;
-  object-fit: cover;
-}
-.cardat h3 {
-  color: rgb(4, 72, 162);
-}
-.cardat p {
-  max-width: 300px;
-}
-.disc {
-  font-size: 1.2rem;
-}
-.hg {
-  margin-bottom: 50px;
-}
-.second-part {
-  background-image: url("https://images.pexels.com/photos/16288048/pexels-photo-16288048/free-photo-of-sailboats-in-cairo.jpeg?auto=compress&cs=tinysrgb&w=600");
-  height: 100vh;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  background-blend-mode: darken;
-  mix-blend-mode: darken;
-  background-position: center;
+
+/* End Section Luxor */
+
+/* Start  Section Cairo */
+.cairo .cairo-cover {
+  background: url("https://images.pexels.com/photos/16288048/pexels-photo-16288048/free-photo-of-sailboats-in-cairo.jpeg?auto=compress&cs=tinysrgb&w=600")
+    no-repeat center center;
   background-size: cover;
+  height: 90vh;
 }
-.second-part p {
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
-  font-size: 5rem;
-  color: rgb(171, 7, 7);
-  font-weight: bold;
-}
-.third-part {
-  background-image: url("https://www.tripsavvy.com/thmb/1yXTbJpiFoS-RRBnxjbrogPy63g=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-496255780-abbefacba80142a4a824f0402cc061e0.jpg");
-  height: 100vh;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  background-blend-mode: darken;
-  mix-blend-mode: darken;
-  background-position: center;
+/* End Section Cairo */
+
+/* Start Section Sharm */
+.sharm .sharm-cover {
+  background: url("https://www.tripsavvy.com/thmb/1yXTbJpiFoS-RRBnxjbrogPy63g=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-496255780-abbefacba80142a4a824f0402cc061e0.jpg")
+    no-repeat center center;
   background-size: cover;
+  height: 90vh;
 }
-.third-part p {
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
-  font-size: 5rem;
-  color: white;
-  font-weight: bold;
-}
-@media (max-width: 600px) {
-  .second-part p {
-    font-size: 4rem;
-    left: 10px;
-    bottom: 10px;
-  }
-}
-@media (max-width: 550px) {
-  .second-part p {
-    font-size: 3rem;
-    left: 0;
-    bottom: 0;
-  }
-}
-@media (max-width: 600px) {
-  .third-part p {
-    font-size: 4rem;
-    left: 10px;
-    bottom: 10px;
-  }
-}
-@media (max-width: 550px) {
-  .third-part p {
-    font-size: 3rem;
-    left: 0;
-    bottom: 0;
-  }
-}
+/* End Section Sharm */

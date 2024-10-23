@@ -1,6 +1,5 @@
 :root {
-  --btn-color: #0b405e;
-  --blue-color: #007bff;
+  --blue-color: #0b405e;
 }
 
 html {
@@ -8,17 +7,13 @@ html {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrolling if there's overflow */
-}
-
-/* To remove padding was given to all app */
-.app[_ngcontent-ng-c2744186268] {
-  padding: 0;
 }
 
 .span-style {
@@ -36,10 +31,30 @@ body {
 
 .cairo .cover-cairo h1 {
   width: 100%;
-  top: 90px;
+  top: 120px;
   left: 30px;
   font-size: 64px;
   font-weight: 400;
+  transition: 0.4s all;
+}
+
+.cairo .cover-cairo h1.animated-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
+  animation-timeline: image();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .card {
@@ -63,13 +78,13 @@ body {
 }
 .card .info h5 {
   margin: 5px 0 0 0;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 21px;
   height: 50px;
 }
 
 .card ul li {
-  color: #0b405e;
+  color: var(--blue-color);
   font-weight: bold;
 }
 
@@ -100,14 +115,8 @@ body {
     margin-bottom: 2rem;
   }
 
-  * {
-    font-size: 13px;
-    overflow-x: hidden;
-  }
-
-  span,
-  .span-style {
-    font-size: 18px;
+  .card {
+    margin: 0 20px;
   }
 }
 
