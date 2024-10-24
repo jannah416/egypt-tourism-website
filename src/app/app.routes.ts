@@ -4,11 +4,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { EgyptDayToursComponent } from './pages/egypt-day-tours/egypt-day-tours.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { WhereToGoComponent } from './pages/where-to-go/where-to-go.component';
-
 import { GoCairoComponent } from './pages/go-cairo/go-cairo.component';
 import { GoLuxorComponent } from './pages/go-luxor/go-luxor.component';
 import { GoSharmComponent } from './pages/go-sharm/go-sharm.component';
+
 
 export const routes: Routes = [
   {
@@ -30,6 +31,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
   },
   {
     path: 'where-to-go',

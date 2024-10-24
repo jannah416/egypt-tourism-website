@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import {
   FormControl,
@@ -6,21 +6,25 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router, RouterModule} from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf,RouterModule,CommonModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  imports: [ReactiveFormsModule, NgIf,CommonModule],
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.css'
 })
-export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+export class SignupComponent  implements OnInit{
+  signupForm: FormGroup;
 
   constructor() {
-    this.loginForm = new FormGroup({
-      email: new FormControl('info123@gmail.com', [
+    this.signupForm = new FormGroup({
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+     
+      ]),
+      email: new FormControl('', [
         Validators.required,
         Validators.email,
       ]),
@@ -33,8 +37,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Login successful:', this.loginForm);
+    if (this.signupForm.valid) {
+      console.log('Login successful:', this.signupForm);
     } else {
       console.log('Form is invalid');
     }
