@@ -268,11 +268,6 @@ table td:last-child:hover {
 
 /* Small devices (tablets, 576px and up) */
 @media (max-width: 575.98px) {
-  * {
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-
   .col-md-6 .box {
     height: 520px;
   }

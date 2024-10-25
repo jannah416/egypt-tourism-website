@@ -1,10 +1,11 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 
 @Component({
   selector: 'app-go-sharm',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './go-sharm.component.html',
   styleUrl: './go-sharm.component.css',
   encapsulation: ViewEncapsulation.None,
@@ -18,6 +19,7 @@ export class GoSharmComponent implements OnInit {
       price: 40,
       hours: 6,
       imageUrl: 'assets/images/imgs/sharm/aqua-park-sharm-main_cee16_lg.jpg',
+      linkTour: 'aqua-park-tour',
     },
     {
       title: 'Luxor Tour From Sharm El Sheikh',

@@ -1,0 +1,294 @@
+<div class="aqua-park-tour">
+  <div class="title-price mx-5 my-4">
+    <div class="title-hour animated-left">
+      <h1>Aqua Park In Sharm El Sheikh</h1>
+      <h4>Sharm El Sheikh day tours</h4>
+    </div>
+    <div class="price text-center animated-right">
+      <i class="fa fa-tags"></i>
+      FROM: $40 <br />
+      Approx. 6 hours
+    </div>
+  </div>
+  <div class="aqua-park-cover my-4"></div>
+
+  <div class="mx-5 py-4">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-12 px-4 pb-4">
+        <div class="info pb-4">
+          <h2>Aqua Park In Sharm El Sheikh</h2>
+          <p>
+            Such a perfect family trip in the summer is the Aqua park at Sharm
+            El Sheikh, if you are already in Sharm El sheikh, travel to Egypt
+            offers you day trip to this water games park. Also make sure to
+            check the rest of Sharm El Sheikh holidays that we offers.
+          </p>
+        </div>
+
+        <div class="tour-info mb-4">
+          <h2>TOUR INFORMATION</h2>
+          <p>
+            Usually the park opens from 10:00 AM to 4:00 PM with more than 34
+            water slides, so our representative will pick you up wherever you
+            are in Sharm and transfer you A\C vehicle to the park, we'll provide
+            you water and snacks during your trip and also you'll be escorted by
+            our guide\ representative. On Wednesdays, there are Bikini pool
+            parties sponsored by Hard Rock café DJ. After the trip ends we'll
+            transport you back to your first station.
+          </p>
+        </div>
+
+        <div class="in-exclude-info mb-4">
+          <div class="include">
+            <i class="fa-solid fa-check fs-2 pb-2"></i>
+            <h2 class="d-inline ps-2">INCLUDED</h2>
+            <ul>
+              <li>All transportations are provided by A\C vehicle</li>
+              <li>Tour guide \ representative</li>
+              <li>Entrance fees and sightseeing as mentioned</li>
+              <li>Meals as mentioned</li>
+              <li>Free snacks</li>
+              <li>Mineral water</li>
+              <li>Taxes and services provided</li>
+              <li>Free Wi-Fi during the tour</li>
+            </ul>
+          </div>
+          <div class="exclude">
+            <i class="fa-solid fa-xmark fs-2 pb-2"></i>
+            <h2 class="d-inline ps-2">EXCLUDED</h2>
+            <ul>
+              <li>No tipping</li>
+              <li>Personal items</li>
+              <li>The price doesn’t include any optional tour</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="need-help">
+          <h2>Need Help</h2>
+          <p>
+            We are always here for help. If you want to know more about our
+            Egypt tours, daily tours, Nile river cruise, and the services we are
+            offering, please contacts us on the following number.
+          </p>
+          <div class="to-inline">
+            <div class="phone-num-whats">
+              <div class="phone-num">
+                <i class="fa-solid fa-phone fs-4 pb-2 me-2"></i>
+                <h3 class="d-inline">+022001232131</h3>
+              </div>
+              <div class="whats">
+                <i class="fa-brands fa-whatsapp fs-3 pb-2 me-2"></i>
+                <h3 class="d-inline">Whatsapp</h3>
+              </div>
+            </div>
+
+            <div class="btn">
+              <a href="#"> Customize Your Trip </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-5 col-sm-12">
+        <div class="Book">
+          <form
+            class="d-flex flex-column justify-content-center custom-form"
+            [formGroup]="BookForm"
+            (ngSubmit)="onSubmit()"
+          >
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input
+                id="name"
+                type="text"
+                formControlName="name"
+                class="form-control"
+                placeholder="Full name"
+              />
+              <div
+                *ngIf="
+                  BookForm.controls['name'].invalid &&
+                  BookForm.controls['name'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['name'].errors?.['required']"
+                  >Name is required.</small
+                >
+                <small *ngIf="BookForm.controls['name'].errors?.['minlength']"
+                  >Name must be at least 3 characters long.</small
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                id="email"
+                type="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="Your name"
+              />
+              <div
+                *ngIf="
+                  BookForm.controls['email'].invalid &&
+                  BookForm.controls['email'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['email'].errors?.['required']"
+                  >Email is required.</small
+                >
+                <small *ngIf="BookForm.controls['email'].errors?.['email']"
+                  >Invalid email format.</small
+                >
+              </div>
+            </div>
+            <!-- Phone input -->
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input
+                id="phone"
+                type="tel"
+                formControlName="phone"
+                class="form-control"
+                placeholder="Your phone number"
+              />
+              <div
+                *ngIf="
+                  BookForm.controls['phone'].invalid &&
+                  BookForm.controls['phone'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['phone'].errors?.['required']"
+                  >Phone number is required.</small
+                >
+                <small *ngIf="BookForm.controls['phone'].errors?.['pattern']"
+                  >Invalid phone number format.</small
+                >
+              </div>
+            </div>
+
+            <!-- Date input -->
+            <div class="form-group">
+              <label for="date">Booking Date *</label>
+              <input
+                id="date"
+                type="date"
+                formControlName="date"
+                class="form-control"
+              />
+              <div
+                *ngIf="
+                  BookForm.controls['date'].invalid &&
+                  BookForm.controls['date'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['date'].errors?.['required']"
+                  >Booking date is required.</small
+                >
+              </div>
+            </div>
+            <!-- Number of adults -->
+            <div class="form-group">
+              <label for="adults">Number of Adults *</label>
+              <input
+                id="adults"
+                type="number"
+                formControlName="adults"
+                class="form-control"
+                placeholder="Enter number of adults"
+                min="1"
+              />
+              <div
+                *ngIf="
+                  BookForm.controls['adults'].invalid &&
+                  BookForm.controls['adults'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['adults'].errors?.['required']"
+                  >Number of adults is required.</small
+                >
+                <small *ngIf="BookForm.controls['adults'].errors?.['min']"
+                  >At least 1 adult is required.</small
+                >
+              </div>
+            </div>
+
+            <!-- Number of children -->
+            <div class="form-group">
+              <label for="children">Number of Children</label>
+              <input
+                id="children"
+                type="number"
+                formControlName="children"
+                class="form-control"
+                placeholder="Enter number of children"
+                min="0"
+              />
+            </div>
+
+            <!-- Number of rooms -->
+            <div class="form-group">
+              <label for="rooms">Number of Rooms *</label>
+              <input
+                id="rooms"
+                type="number"
+                formControlName="rooms"
+                class="form-control"
+                placeholder="Enter number of rooms"
+                min="1"
+              />
+              <div
+                *ngIf="
+                  BookForm.controls['rooms'].invalid &&
+                  BookForm.controls['rooms'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['rooms'].errors?.['required']"
+                  >Number of rooms is required.</small
+                >
+                <small *ngIf="BookForm.controls['rooms'].errors?.['min']"
+                  >At least 1 room is required.</small
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message"> Inquiry</label>
+              <textarea
+                rows="3"
+                id="message"
+                formControlName="message"
+                class="form-control text-message"
+              ></textarea>
+              <div
+                *ngIf="
+                  BookForm.controls['message'].invalid &&
+                  BookForm.controls['message'].touched
+                "
+                class="text-danger"
+              >
+                <small *ngIf="BookForm.controls['message'].errors?.['required']"
+                  >Inquiry is required.</small
+                >
+                <small
+                  *ngIf="BookForm.controls['message'].errors?.['minlength']"
+                  >Inquiry must be at least 10 characters long.</small
+                >
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Make Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

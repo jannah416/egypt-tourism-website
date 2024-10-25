@@ -1,10 +1,11 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 
 @Component({
   selector: 'app-go-cairo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './go-cairo.component.html',
   styleUrl: './go-cairo.component.css',
   encapsulation: ViewEncapsulation.None,
@@ -29,6 +30,7 @@ export class GoCairoComponent implements OnInit {
       hours: 4,
       price: 75,
       imageUrl: 'assets/images/imgs/cairo/pyramids.webp',
+      linkTour: 'giza-pyramids-spghinx',
     },
     {
       title: 'Pyramids & The Egyptian Museum',
@@ -117,6 +119,24 @@ export class GoCairoComponent implements OnInit {
       imageUrl: 'assets/images/imgs/cairo/coptic_43582_lg.jpg',
     },
   ];
+
+  // linkTour = [
+  //   'museum-citadal',
+  //   'giza-pyramids-spghinx',
+  //   'pyramids-egyMuseum',
+  //   'pyramids-memphis',
+  //   'trip-luxor-cairo',
+  //   'alex-from-cairo',
+  //   'sound-light-pyramids',
+  //   'nile-dinner-cruise',
+  //   'camel-ride',
+  //   'felucca-ride-on-nile',
+  //   'ce-from-alexPort',
+  //   'pyramids-sakkara',
+  //   'pyramids-lunchCruise',
+  //   'cairo-from-port',
+  //   'comptic-cairo',
+  // ];
 
   constructor() {}
 

@@ -47,7 +47,17 @@
             <i class="fa fa-tags"></i>
             From: <span class="fw-bold">${{ card.price }}</span>
           </div>
-          <img [src]="card.imageUrl" alt="" />
+          <!-- when hover on image can click to go the link of card(tour) -->
+          <div class="tour-img position-relative">
+            <a
+              class="link-tour w-100 h-100 position-absolute"
+              href="#"
+              *ngIf="card.linkTour"
+              [routerLink]="['/pyramids-tour']"
+            >
+            </a>
+            <img [src]="card.imageUrl" class="w-100" alt="" />
+          </div>
           <div class="info">
             <h5>{{ card.title }}</h5>
             <p *ngIf="card.description" class="text-black-50">

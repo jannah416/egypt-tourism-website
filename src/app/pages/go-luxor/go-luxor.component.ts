@@ -1,10 +1,11 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 
 @Component({
   selector: 'app-go-luxor',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './go-luxor.component.html',
   styleUrl: './go-luxor.component.css',
   encapsulation: ViewEncapsulation.None,
@@ -19,6 +20,7 @@ export class GoLuxorComponent implements OnInit {
       hours: 6,
       imageUrl:
         'assets/images/imgs/luxor/Karnak and Luxor Temples tour_f2685_lg.jpg',
+      linkTour: 'east-west-tour',
     },
     {
       title: 'Valley of the Kings, Memnon Colossi',
