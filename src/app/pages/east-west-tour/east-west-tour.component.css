@@ -1,0 +1,69 @@
+header {
+  height: 70vh;
+  width: 100%;
+  background: url(https://www.traveltoegypt.net/uploads/tour/1613389678east-and-west-nile-banks-tour.jpg)
+    no-repeat center center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+/* Start Form Book */
+.Book {
+  width: fit-content;
+  padding: 40px;
+  background-color: #0b405e;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+/* @media (max-width: 575.98px) {
+  .Book {
+    width: 400px;
+  }
+} */
+
+.form-group label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 17px;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+
+.form-group input {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 20px;
+  color: white;
+  width: 400px;
+}
+
+button {
+  background-color: rgb(45, 126, 231);
+  padding: 0.4rem 1rem;
+  border-radius: 40px;
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+  width: 200px;
+}
+
+@media (max-width: 575.98px) {
+  .form-group input {
+    width: 300px;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form-group input {
+    width: 400px;
+  }
+}
+/* End Form Book */
