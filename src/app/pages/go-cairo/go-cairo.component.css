@@ -35,15 +35,12 @@ body {
   left: 30px;
   font-size: 64px;
   font-weight: 400;
-  transition: 0.4s all;
 }
 
 .cairo .cover-cairo h1.animated-left {
   opacity: 0;
   transform: translateX(-100px);
   animation: slideInLeft 0.7s ease-in-out 0.5s forwards;
-  animation-timeline: image();
-  animation-range: entry 0 cover 40%;
 }
 
 @keyframes slideInLeft {
@@ -65,7 +62,10 @@ body {
 }
 .card:hover {
   transform: translateY(-15px);
-  cursor: pointer;
+}
+.card .link-tour {
+  width: 343px;
+  height: 200px;
 }
 
 .card .info {
@@ -93,6 +93,7 @@ body {
   padding: 0.5rem 1rem;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  z-index: 10000;
 }
 
 .logo-loc {

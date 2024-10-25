@@ -7,12 +7,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { WhereToGoComponent } from './pages/where-to-go/where-to-go.component';
 import { GoCairoComponent } from './pages/go-cairo/go-cairo.component';
+import { PyramidsTourComponent } from './pages/go-cairo/pyramids-tour/pyramids-tour.component';
 import { GoLuxorComponent } from './pages/go-luxor/go-luxor.component';
+import { EastWestTourComponent } from './pages/go-luxor/east-west-tour/east-west-tour.component';
 import { GoSharmComponent } from './pages/go-sharm/go-sharm.component';
-import { AquaParkTourComponent } from './pages/aqua-park-tour/aqua-park-tour.component';
-import { PyramidsTourComponent } from './pages/pyramids-tour/pyramids-tour.component';
-import { EastWestTourComponent } from './pages/east-west-tour/east-west-tour.component';
-
+import { AquaParkTourComponent } from './pages/go-sharm/aqua-park-tour/aqua-park-tour.component';
 
 export const routes: Routes = [
   {
@@ -49,8 +48,16 @@ export const routes: Routes = [
     component: GoCairoComponent,
   },
   {
+    path: 'pyramids-tour',
+    component: PyramidsTourComponent,
+  },
+  {
     path: 'go-luxor',
     component: GoLuxorComponent,
+  },
+  {
+    path: 'east-west-tour',
+    component: EastWestTourComponent,
   },
   {
     path: 'go-sharm',
@@ -60,14 +67,7 @@ export const routes: Routes = [
     path: 'aqua-park-tour',
     component: AquaParkTourComponent,
   },
-  {
-    path: 'pyramids-tour',
-    component: PyramidsTourComponent,
-  },
-  {
-    path: 'east-west-tour',
-    component: EastWestTourComponent,
-  },
+
   {
     path: '**',
     redirectTo: '',

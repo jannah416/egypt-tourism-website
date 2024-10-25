@@ -1,7 +1,7 @@
 <header>
   <div class="date">
-    <p>Today's Date: {{ currentDate | date:'fullDate'}}</p>
-    </div>
+    <p>Today's Date: {{ currentDate | date : "fullDate" }}</p>
+  </div>
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a href="/" class="logo navbar-brand"
@@ -33,10 +33,24 @@
               >Where To Go</a
             >
           </li>
-          <li class="nav-item position-relative">
+          <li class="nav-item position-relative d-flex show-list">
             <a routerLink="/egypt-day-tours" class="nav-link p-2 p-lg-3"
               >Egypt Day Tours</a
             >
+            <i class="fa-solid fa-angle-down position-absolute"></i>
+            <ul class="tours-list position-absolute list-unstyled">
+              <li>
+                <a href="#" [routerLink]="['/go-cairo']">Cairo Day Tours</a>
+              </li>
+              <li>
+                <a href="#" [routerLink]="['/go-luxor']">Luxor Day Tours</a>
+              </li>
+              <li>
+                <a [routerLink]="['/go-sharm']" href="#"
+                  >Sharm El Sheikh Day Tours</a
+                >
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a routerLink="/contact-us" class="nav-link p-2 p-lg-3"

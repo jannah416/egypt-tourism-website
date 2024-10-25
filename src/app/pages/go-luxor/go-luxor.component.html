@@ -52,10 +52,20 @@
             <i class="fa fa-tags"></i>
             From: <span class="fw-bold">$75</span>
           </div>
-          <img
-            src="assets/images/imgs/luxor/East and West Nile Banks package tour_ff6ac_lg.jpg"
-            alt=""
-          />
+          <!-- when hover on image can click to go the link of tour to paid -->
+          <div class="tour-img position-relative">
+            <a
+              class="link-tour w-100 h-100 position-absolute"
+              href="#"
+              [routerLink]="['/east-west-tour']"
+            >
+            </a>
+            <img
+              src="assets/images/imgs/luxor/East and West Nile Banks package tour_ff6ac_lg.jpg"
+              alt=""
+              class="w-100"
+            />
+          </div>
           <div class="info pb-5">
             <h5>East and West Nile Banks tour</h5>
             <p class="pb-4 pt-4 text-black-50">
