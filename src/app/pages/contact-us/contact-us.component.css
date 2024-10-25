@@ -7,7 +7,7 @@
 header {
   height: 70vh;
   width: 100%;
-  background: url("https://www.traveltoegypt.net/uploads/blog/1676820883solo-female-traveler.png")
+  background: url(/assets/images/museum.jpg)
     no-repeat center center;
   background-size: cover;
   position: relative;

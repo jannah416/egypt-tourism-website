@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
-import { Component,OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule,Validators ,FormBuilder} from '@angular/forms';
+import { Component } from '@angular/core';
+import {  FormGroup, ReactiveFormsModule,Validators ,FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',

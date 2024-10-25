@@ -84,31 +84,21 @@
     </div>
 
     <div class="form-group">
-      <label for="password">Please Confirm Password</label>
+      <label for="confirmPassword">Please Confirm Password</label>
       <input
-        id="password"
+        id="confirmPassword"
         type="password"
         placeholder="Confirm Password*"
-        formControlName="password"
+        formControlName="confirmPassword"
         class="form-control"
         required
       />
       <div
-        *ngIf="
-          signupForm.get('password')?.invalid &&
-          signupForm.get('password')?.touched
-        "
+        *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched"
         class="text-danger"
       >
-        <small *ngIf="signupForm.get('password')?.hasError('required')"
-          >Password is required.</small
-        >
-        <small *ngIf="signupForm.get('password')?.hasError('minlength')"
-          >Password must be at least 6 characters long.</small
-        >
-        <small *ngIf="signupForm.get('password')?.hasError('maxlength')"
-          >Password must be at max 16 characters long.</small
-        >
+        <small *ngIf="signupForm.get('confirmPassword')?.hasError('required')">Password confirmation is required.</small>
+        <small *ngIf="signupForm.get('confirmPassword')?.hasError('passwordMismatch')">Passwords do not match.</small>
       </div>
     </div>
 
